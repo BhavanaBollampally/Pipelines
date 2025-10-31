@@ -21,3 +21,9 @@ jobs:
         run: |
           chmod +x ./pipeline1.sh
             bash ./pipeline1.sh
+
+      - name: Upload log artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline1-logs
+          path: pipeline1_logfolder/*.log
